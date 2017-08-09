@@ -1,0 +1,541 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = undefined;
+var _jsxFileName = '/home/naveen/TestProject/App.js';
+
+var _react = require('react');
+
+var _react2 = babelHelpers.interopRequireDefault(_react);
+
+var _reactNative = require('react-native');
+
+var App = function (_React$Component) {
+  babelHelpers.inherits(App, _React$Component);
+
+  function App(props) {
+    babelHelpers.classCallCheck(this, App);
+
+    var _this = babelHelpers.possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+    var ds = new _reactNative.ListView.DataSource({ rowHasChanged: function rowHasChanged(r1, r2) {
+        return r1 !== r2;
+      } });
+    _this.state = {
+      datasource: ds.cloneWithRows(['http://7wallpapers.net/wp-content/uploads/2_Despicable-Me-3.jpg', 'http://7wallpapers.net/wp-content/uploads/1_The-Croods-2.jpg', 'http://7wallpapers.net/wp-content/uploads/6_Cars-3.jpg']),
+      horrorClips: ds.cloneWithRows(['http://7wallpapers.net/wp-content/uploads/1_Rings.jpg', 'http://7wallpapers.net/wp-content/uploads/7_Jeepers-Creepers-3-Cathedral.jpg', 'http://www.free4geeks.com/wp-content/uploads/2014/06/Dracula-Untold.jpg']),
+      actionClips: ds.cloneWithRows(['http://images.newseveryday.com/data/thumbs/full/54581/720/0/0/0/resident-evil-the-final-chapter.png', 'http://7wallpapers.net/wp-content/uploads/4_Avengers-Age-Of-Ultron.jpg'])
+    };
+    _this.tabToast = _this.tabToast.bind(_this);
+    return _this;
+  }
+
+  babelHelpers.createClass(App, [{
+    key: 'displayToast',
+    value: function displayToast(rowData) {
+      console.log('item: ' + rowData);
+      _reactNative.Alert.alert('Movie URL', rowData, [{ text: 'Ok', onPress: function onPress() {
+          return console.log('OK Pressed');
+        } }], { cancelable: true });
+    }
+  }, {
+    key: 'tabToast',
+    value: function tabToast(data) {
+      console.log('Tab bar pressed: ' + data);
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react2.default.createElement(
+        _reactNative.View,
+        { style: styles.containermain, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 48
+          }
+        },
+        _react2.default.createElement(
+          _reactNative.View,
+          { style: { flexDirection: 'row', alignItems: 'center' }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 49
+            }
+          },
+          _react2.default.createElement(_reactNative.Image, {
+            style: { width: 25, height: 25, margin: 10 },
+            source: require('./img/moviereel.jpg'),
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 50
+            }
+          }),
+          _react2.default.createElement(
+            _reactNative.Text,
+            { style: { fontSize: 20, color: 'skyblue', marginLeft: 10 }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 54
+              }
+            },
+            'Latest Movies'
+          )
+        ),
+        _react2.default.createElement(
+          _reactNative.ScrollView,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 56
+            }
+          },
+          _react2.default.createElement(
+            _reactNative.View,
+            { style: styles.container, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 57
+              }
+            },
+            _react2.default.createElement(
+              _reactNative.View,
+              { style: styles.container, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 58
+                }
+              },
+              _react2.default.createElement(
+                _reactNative.Text,
+                { style: { color: 'orange', marginTop: 20, marginBottom: 10, marginLeft: 10,
+                    fontSize: 22 }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 59
+                  }
+                },
+                'Animated'
+              ),
+              _react2.default.createElement(_reactNative.ListView, {
+                horizontal: true,
+                dataSource: this.state.datasource,
+                renderRow: function renderRow(rowData) {
+                  return _react2.default.createElement(
+                    _reactNative.View,
+                    { style: styles.containerr, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 65
+                      }
+                    },
+                    _react2.default.createElement(
+                      _reactNative.TouchableOpacity,
+                      { style: { width: 250, height: 150, margin: 10 },
+                        onPress: function onPress() {
+                          return _this2.displayToast(rowData);
+                        }, __source: {
+                          fileName: _jsxFileName,
+                          lineNumber: 66
+                        }
+                      },
+                      _react2.default.createElement(
+                        _reactNative.Image,
+                        {
+                          source: { uri: rowData },
+                          style: styles.imaget, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 68
+                          }
+                        },
+                        _react2.default.createElement(
+                          _reactNative.View,
+                          { style: { flexDirection: 'column' }, __source: {
+                              fileName: _jsxFileName,
+                              lineNumber: 71
+                            }
+                          },
+                          _react2.default.createElement(
+                            _reactNative.Text,
+                            {
+                              style: styles.paragraph, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 72
+                              }
+                            },
+                            'Animated'
+                          )
+                        )
+                      )
+                    )
+                  );
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 61
+                }
+              })
+            ),
+            _react2.default.createElement(
+              _reactNative.View,
+              { style: styles.container, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 83
+                }
+              },
+              _react2.default.createElement(
+                _reactNative.Text,
+                { style: { color: 'orange', marginTop: 20, marginBottom: 10, marginLeft: 10,
+                    fontSize: 22 }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 84
+                  }
+                },
+                'Horror'
+              ),
+              _react2.default.createElement(_reactNative.ListView, {
+                horizontal: true,
+                dataSource: this.state.horrorClips,
+                renderRow: function renderRow(rowData) {
+                  return _react2.default.createElement(
+                    _reactNative.View,
+                    { style: styles.containerr, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 90
+                      }
+                    },
+                    _react2.default.createElement(
+                      _reactNative.TouchableOpacity,
+                      { style: { width: 250, height: 150, margin: 10 },
+                        onPress: function onPress() {
+                          return _this2.displayToast(rowData);
+                        }, __source: {
+                          fileName: _jsxFileName,
+                          lineNumber: 91
+                        }
+                      },
+                      _react2.default.createElement(
+                        _reactNative.Image,
+                        {
+                          source: { uri: rowData },
+                          style: styles.imaget, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 93
+                          }
+                        },
+                        _react2.default.createElement(
+                          _reactNative.Text,
+                          {
+                            style: styles.paragraph, __source: {
+                              fileName: _jsxFileName,
+                              lineNumber: 96
+                            }
+                          },
+                          'Horror'
+                        )
+                      )
+                    )
+                  );
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 86
+                }
+              })
+            ),
+            _react2.default.createElement(
+              _reactNative.View,
+              { style: styles.container, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 106
+                }
+              },
+              _react2.default.createElement(
+                _reactNative.Text,
+                { style: { color: 'orange', marginTop: 20, marginBottom: 10, marginLeft: 10,
+                    fontSize: 22 }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 107
+                  }
+                },
+                'Action'
+              ),
+              _react2.default.createElement(_reactNative.ListView, {
+                horizontal: true,
+                dataSource: this.state.actionClips,
+                renderRow: function renderRow(rowData) {
+                  return _react2.default.createElement(
+                    _reactNative.View,
+                    { style: styles.containerr, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 113
+                      }
+                    },
+                    _react2.default.createElement(
+                      _reactNative.TouchableOpacity,
+                      { style: { width: 250, height: 150, margin: 10 },
+                        onPress: function onPress() {
+                          return _this2.displayToast(rowData);
+                        }, __source: {
+                          fileName: _jsxFileName,
+                          lineNumber: 114
+                        }
+                      },
+                      _react2.default.createElement(
+                        _reactNative.Image,
+                        {
+                          style: styles.imaget,
+                          source: { uri: rowData }, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 116
+                          }
+                        },
+                        _react2.default.createElement(
+                          _reactNative.Text,
+                          {
+                            style: styles.paragraph, __source: {
+                              fileName: _jsxFileName,
+                              lineNumber: 119
+                            }
+                          },
+                          'Action'
+                        )
+                      )
+                    )
+                  );
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 109
+                }
+              })
+            )
+          )
+        ),
+        _react2.default.createElement(
+          _reactNative.View,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 131
+            }
+          },
+          _react2.default.createElement(
+            _reactNative.View,
+            { style: { flexDirection: 'row', alignItems: 'center', backgroundColor: 'lightgrey' }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 132
+              }
+            },
+            _react2.default.createElement(
+              _reactNative.TouchableOpacity,
+              {
+                style: { flex: 1, flexDirection: 'column' },
+                onPress: function onPress() {
+                  return _this2.tabToast('Home');
+                }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 133
+                }
+              },
+              _react2.default.createElement(
+                _reactNative.View,
+                { style: { flex: 1, flexDirection: 'column' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 136
+                  }
+                },
+                _react2.default.createElement(_reactNative.Image, {
+                  style: styles.imageTab,
+                  source: require('./img/home.png'),
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 137
+                  }
+                }),
+                _react2.default.createElement(
+                  _reactNative.Text,
+                  { style: styles.textTab, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 141
+                    }
+                  },
+                  'Home'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              _reactNative.TouchableOpacity,
+              {
+                style: { flex: 1, flexDirection: 'column' },
+                onPress: function onPress() {
+                  return _this2.tabToast('Bookmarks');
+                }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 144
+                }
+              },
+              _react2.default.createElement(
+                _reactNative.View,
+                { style: { flex: 1, flexDirection: 'column' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 147
+                  }
+                },
+                _react2.default.createElement(_reactNative.Image, {
+                  style: styles.imageTab,
+                  source: require('./img/bookmark.png'),
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 148
+                  }
+                }),
+                _react2.default.createElement(
+                  _reactNative.Text,
+                  { style: styles.textTab, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 152
+                    }
+                  },
+                  'Favourites'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              _reactNative.TouchableOpacity,
+              {
+                style: { flex: 1, flexDirection: 'column' },
+                onPress: function onPress() {
+                  return _this2.tabToast('Trending');
+                }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 155
+                }
+              },
+              _react2.default.createElement(
+                _reactNative.View,
+                { style: { flex: 1, flexDirection: 'column' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 158
+                  }
+                },
+                _react2.default.createElement(_reactNative.Image, {
+                  style: styles.imageTab,
+                  source: require('./img/flame.png'),
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 159
+                  }
+                }),
+                _react2.default.createElement(
+                  _reactNative.Text,
+                  { style: styles.textTab, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 163
+                    }
+                  },
+                  'Trending'
+                )
+              )
+            ),
+            _react2.default.createElement(
+              _reactNative.View,
+              { style: { flex: 1, flexDirection: 'column' },
+                onPress: function onPress() {
+                  return _this2.tabToast('Profile');
+                }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 166
+                }
+              },
+              _react2.default.createElement(_reactNative.Image, {
+                style: styles.imageTab,
+                source: require('./img/profile.png'),
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 168
+                }
+              }),
+              _react2.default.createElement(
+                _reactNative.Text,
+                { style: styles.textTab, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 172
+                  }
+                },
+                'Profile'
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+  return App;
+}(_react2.default.Component);
+
+exports.default = App;
+
+
+var styles = _reactNative.StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column'
+  },
+  containermain: {
+    flex: 1,
+    paddingTop: 22,
+    flexDirection: 'column'
+  },
+  textTab: { fontSize: 16, margin: 5, textAlign: 'center' },
+  imageTab: { width: 25, height: 25, marginTop: 10, alignSelf: 'center' },
+  containerr: {
+    flex: 1,
+    alignItems: 'center',
+    paddingTop: 10,
+    flexDirection: 'row'
+  },
+  transp: {
+    flex: 1,
+    alignItems: 'stretch',
+    justifyContent: 'center'
+  },
+  textStyle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'red',
+    fontStyle: 'italic',
+    backgroundColor: 'transparent'
+  },
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44
+  },
+  scene: {
+    padding: 10,
+    paddingTop: 74,
+    flex: 1
+  },
+  imageStyle: {
+    width: 250,
+    height: 150,
+    margin: 10,
+    backgroundColor: 'rgba(0,0,0,.6)'
+  },
+  overlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0,0,0,0.5)'
+  },
+  imaget: {
+    flexGrow: 1,
+    height: null,
+    width: null,
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end'
+  },
+  paragraph: {
+    textAlign: 'left',
+    color: 'white',
+    padding: 3,
+    backgroundColor: 'orange'
+  }
+});

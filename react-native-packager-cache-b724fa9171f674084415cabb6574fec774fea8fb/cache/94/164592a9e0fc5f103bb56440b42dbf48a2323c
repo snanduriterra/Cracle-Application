@@ -1,0 +1,330 @@
+Object.defineProperty(exports,"__esModule",{value:true});exports.default=undefined;var _react=require("react");var _react2=babelHelpers.interopRequireDefault(_react);
+var _reactNative=require("react-native");var
+
+
+App=function(_React$Component){babelHelpers.inherits(App,_React$Component);
+
+function App(props){babelHelpers.classCallCheck(this,App);var _this=babelHelpers.possibleConstructorReturn(this,(App.__proto__||Object.getPrototypeOf(App)).call(this,
+props));
+var ds=new _reactNative.ListView.DataSource({rowHasChanged:function rowHasChanged(r1,r2){return r1!==r2;}});
+_this.state={
+datasource:ds.cloneWithRows(['http://7wallpapers.net/wp-content/uploads/2_Despicable-Me-3.jpg','http://7wallpapers.net/wp-content/uploads/1_The-Croods-2.jpg','http://7wallpapers.net/wp-content/uploads/6_Cars-3-250x150.jpg',
+'http://7wallpapers.net/wp-content/uploads/2_A-Dogs-Purpose-250x150.jpg','http://7wallpapers.net/wp-content/uploads/3_The-Boss-Baby.jpg','http://7wallpapers.net/wp-content/uploads/1_Kingsman-The-Golden-Circle-250x150.jpg','http://7wallpapers.net/wp-content/uploads/2_Beauty-and-the-Beast-250x150.jpg']),
+horrorClips:ds.cloneWithRows(['http://7wallpapers.net/wp-content/uploads/1_Rings.jpg','http://7wallpapers.net/wp-content/uploads/7_Jeepers-Creepers-3-Cathedral-250x150.jpg','http://7wallpapers.net/wp-content/uploads/11_The-Dark-Tower-250x150.jpg','http://www.free4geeks.com/wp-content/uploads/2014/06/Dracula-Untold.jpg','http://7wallpapers.net/wp-content/uploads/3_The-Bye-Bye-Man-250x150.jpg','http://7wallpapers.net/wp-content/uploads/1_The-Bye-Bye-Man-250x150.jpg','http://7wallpapers.net/wp-content/uploads/6_The-Mummy-250x150.jpg']),
+actionClips:ds.cloneWithRows(['http://images.newseveryday.com/data/thumbs/full/54581/720/0/0/0/resident-evil-the-final-chapter.png','http://7wallpapers.net/wp-content/uploads/4_Avengers-Age-Of-Ultron.jpg',
+'http://7wallpapers.net/wp-content/uploads/2_World-War-Z-2-250x150.jpg','http://7wallpapers.net/wp-content/uploads/4_World-War-Z-2-250x150.jpg','http://7wallpapers.net/wp-content/uploads/6_Power-Rangers-250x150.jpg','http://7wallpapers.net/wp-content/uploads/3_Justice-League-250x150.jpg']),
+thrillerClips:ds.cloneWithRows(['http://7wallpapers.net/wp-content/uploads/12_Baywatch.jpg','http://7wallpapers.net/wp-content/uploads/20_Ghost-in-the-Shell-250x150.jpg','http://7wallpapers.net/wp-content/uploads/7_Ghost-in-the-Shell-250x150.jpg','http://7wallpapers.net/wp-content/uploads/11_Beauty-and-the-Beast-250x150.jpg','http://7wallpapers.net/wp-content/uploads/3_Sleepless.jpg',
+'http://7wallpapers.net/wp-content/uploads/1_The-Divergent-Series-Ascendant.jpg','http://7wallpapers.net/wp-content/uploads/2_The-Divergent-Series-Ascendant.jpg']),
+scifiClips:ds.cloneWithRows(['http://7wallpapers.net/wp-content/uploads/4_Valerian-and-the-City-of-a-Thousand-Planets.jpg','http://7wallpapers.net/wp-content/uploads/5_Beauty-and-the-Beast-250x150.jpg','http://7wallpapers.net/wp-content/uploads/1_Life-250x150.jpg','http://7wallpapers.net/wp-content/uploads/1_A-Cure-for-Wellness-250x150.jpg','http://7wallpapers.net/wp-content/uploads/17_A-Cure-for-Wellness-250x150.jpg','http://7wallpapers.net/wp-content/uploads/1_Jeepers-Creepers-3-Cathedral-250x150.jpg','http://7wallpapers.net/wp-content/uploads/4_Valerian-and-the-City-of-a-Thousand-Planets.jpg']),
+adventureClips:ds.cloneWithRows(['http://7wallpapers.net/wp-content/uploads/10_Wonder-Woman.jpg','http://7wallpapers.net/wp-content/uploads/7_Wonder-Woman.jpg','http://7wallpapers.net/wp-content/uploads/19_Kingsman-The-Golden-Circle-250x150.jpg','http://7wallpapers.net/wp-content/uploads/10_John-Wick-Chapter-Two-250x150.jpg','http://7wallpapers.net/wp-content/uploads/8_John-Wick-Chapter-Two-250x150.jpg','http://7wallpapers.net/wp-content/uploads/2_War-for-the-Planet-of-the-Apes.jpg','http://7wallpapers.net/wp-content/uploads/2_Transformers-The-Last-Knight-250x150.jpg','http://7wallpapers.net/wp-content/uploads/6_Justice-League-250x150.jpg'])};
+
+_this.tabToast=_this.tabToast.bind(_this);return _this;
+}babelHelpers.createClass(App,[{key:"displayToast",value:function displayToast(
+
+rowData){
+console.log('item: '+rowData);
+_reactNative.Alert.alert(
+'Movie URL',
+rowData,
+[
+{text:'Ok',onPress:function onPress(){return console.log('OK Pressed');}}],
+
+{cancelable:true});
+
+}},{key:"tabToast",value:function tabToast(
+data){
+console.log('Tab bar pressed: '+data);
+
+}
+
+/*displayToast(rowData) {
+       Alert.alert(
+          'Movie',
+          'What you would like to do?',
+        [
+          {text: 'Cancel', onPress: () => console.log('cancel Pressed'),
+          {text: 'View', onPress: () => console.log('OK Pressed')},
+        ],
+          { cancelable: false }
+        )
+     }*/},{key:"render",value:function render()
+
+{var _this2=this;
+return(
+_react2.default.createElement(_reactNative.View,{style:styles.containermain},
+_react2.default.createElement(_reactNative.View,{style:{flexDirection:'row',alignItems:'center',marginBottom:5}},
+_react2.default.createElement(_reactNative.Image,{
+style:{width:30,height:30,marginLeft:10,marginRight:10},
+source:require('./img/cracklelogo.jpg')}),
+
+_react2.default.createElement(_reactNative.View,{style:{flexDirection:'column',alignItems:'center'}},
+_react2.default.createElement(_reactNative.Text,{style:{fontSize:15,fontWeight:'bold',color:'darkorange',marginLeft:10}},"Crackle"),
+_react2.default.createElement(_reactNative.Text,{style:{fontSize:10,marginLeft:10}},"Trending Movies"))),
+
+
+_react2.default.createElement(_reactNative.ScrollView,null,
+_react2.default.createElement(_reactNative.View,{style:styles.container},
+_react2.default.createElement(_reactNative.View,{style:styles.container},
+_react2.default.createElement(_reactNative.Text,{style:{color:'orange',marginTop:20,marginBottom:10,marginLeft:10,
+fontSize:22}},"Animated"),
+_react2.default.createElement(_reactNative.ListView,{
+horizontal:true,
+dataSource:this.state.datasource,
+renderRow:function renderRow(rowData){return(
+_react2.default.createElement(_reactNative.View,{style:styles.containerr},
+_react2.default.createElement(_reactNative.TouchableOpacity,{style:{width:250,height:150,margin:10},
+onPress:function onPress(){return _this2.displayToast(rowData);}},
+_react2.default.createElement(_reactNative.Image,{
+source:{uri:rowData},
+style:styles.imaget},
+_react2.default.createElement(_reactNative.View,{style:{flexDirection:'column'}},
+_react2.default.createElement(_reactNative.Text,{
+style:styles.paragraph},"Animated"))))));}})),
+
+
+
+
+
+
+
+
+
+_react2.default.createElement(_reactNative.View,{style:styles.container},
+_react2.default.createElement(_reactNative.Text,{style:{color:'orange',marginTop:20,marginBottom:10,marginLeft:10,
+fontSize:22}},"Horror"),
+_react2.default.createElement(_reactNative.ListView,{
+horizontal:true,
+dataSource:this.state.horrorClips,
+renderRow:function renderRow(rowData){return(
+_react2.default.createElement(_reactNative.View,{style:styles.containerr},
+_react2.default.createElement(_reactNative.TouchableOpacity,{style:{width:250,height:150,margin:10},
+onPress:function onPress(){return _this2.displayToast(rowData);}},
+_react2.default.createElement(_reactNative.Image,{
+source:{uri:rowData},
+style:styles.imaget},
+_react2.default.createElement(_reactNative.Text,{
+style:styles.paragraph},"Horror")))));}})),
+
+
+
+
+
+
+
+
+_react2.default.createElement(_reactNative.View,{style:styles.container},
+_react2.default.createElement(_reactNative.Text,{style:{color:'orange',marginTop:20,marginBottom:10,marginLeft:10,
+fontSize:22}},"Action"),
+_react2.default.createElement(_reactNative.ListView,{
+horizontal:true,
+dataSource:this.state.actionClips,
+renderRow:function renderRow(rowData){return(
+_react2.default.createElement(_reactNative.View,{style:styles.containerr},
+_react2.default.createElement(_reactNative.TouchableOpacity,{style:{width:250,height:150,margin:10},
+onPress:function onPress(){return _this2.displayToast(rowData);}},
+_react2.default.createElement(_reactNative.Image,{
+style:styles.imaget,
+source:{uri:rowData}},
+_react2.default.createElement(_reactNative.Text,{
+style:styles.paragraph},"Action")))));}})),
+
+
+
+
+
+
+
+
+_react2.default.createElement(_reactNative.View,{style:styles.container},
+_react2.default.createElement(_reactNative.Text,{style:{color:'orange',marginTop:20,marginBottom:10,marginLeft:10,
+fontSize:22}},"Thriller"),
+_react2.default.createElement(_reactNative.ListView,{
+horizontal:true,
+dataSource:this.state.thrillerClips,
+renderRow:function renderRow(rowData){return(
+_react2.default.createElement(_reactNative.View,{style:styles.containerr},
+_react2.default.createElement(_reactNative.TouchableOpacity,{style:{width:250,height:150,margin:10},
+onPress:function onPress(){return _this2.displayToast(rowData);}},
+_react2.default.createElement(_reactNative.Image,{
+source:{uri:rowData},
+style:styles.imaget},
+_react2.default.createElement(_reactNative.View,{style:{flexDirection:'column'}},
+_react2.default.createElement(_reactNative.Text,{
+style:styles.paragraph},"Thriller"))))));}})),
+
+
+
+
+
+
+
+
+
+_react2.default.createElement(_reactNative.View,{style:styles.container},
+_react2.default.createElement(_reactNative.Text,{style:{color:'orange',marginTop:20,marginBottom:10,marginLeft:10,
+fontSize:22}},"Sci-Fi Movies"),
+_react2.default.createElement(_reactNative.ListView,{
+horizontal:true,
+dataSource:this.state.scifiClips,
+renderRow:function renderRow(rowData){return(
+_react2.default.createElement(_reactNative.View,{style:styles.containerr},
+_react2.default.createElement(_reactNative.TouchableOpacity,{style:{width:250,height:150,margin:10},
+onPress:function onPress(){return _this2.displayToast(rowData);}},
+_react2.default.createElement(_reactNative.Image,{
+source:{uri:rowData},
+style:styles.imaget},
+_react2.default.createElement(_reactNative.View,{style:{flexDirection:'column'}},
+_react2.default.createElement(_reactNative.Text,{
+style:styles.paragraph},"Sci-Fi"))))));}})),
+
+
+
+
+
+
+
+
+
+_react2.default.createElement(_reactNative.View,{style:styles.container},
+_react2.default.createElement(_reactNative.Text,{style:{color:'orange',marginTop:20,marginBottom:10,marginLeft:10,
+fontSize:22}},"Adventure Movies"),
+_react2.default.createElement(_reactNative.ListView,{
+horizontal:true,
+dataSource:this.state.adventureClips,
+renderRow:function renderRow(rowData){return(
+_react2.default.createElement(_reactNative.View,{style:styles.containerr},
+_react2.default.createElement(_reactNative.TouchableOpacity,{style:{width:250,height:150,margin:10},
+onPress:function onPress(){return _this2.displayToast(rowData);}},
+_react2.default.createElement(_reactNative.Image,{
+source:{uri:rowData},
+style:styles.imaget},
+_react2.default.createElement(_reactNative.View,{style:{flexDirection:'column'}},
+_react2.default.createElement(_reactNative.Text,{
+style:styles.paragraph},"Adventure"))))));}})))),
+
+
+
+
+
+
+
+
+
+
+
+_react2.default.createElement(_reactNative.View,null,
+_react2.default.createElement(_reactNative.View,{style:{flexDirection:'row',alignItems:'center',backgroundColor:'lightgrey'}},
+_react2.default.createElement(_reactNative.TouchableOpacity,{
+style:{flex:1,flexDirection:'column'},
+onPress:function onPress(){return _this2.tabToast('Home');}},
+_react2.default.createElement(_reactNative.View,{style:{flex:1,flexDirection:'column'}},
+_react2.default.createElement(_reactNative.Image,{
+style:styles.imageTab,
+source:require('./img/home.png')}),
+
+_react2.default.createElement(_reactNative.Text,{style:styles.textTab},"Home"))),
+
+
+_react2.default.createElement(_reactNative.TouchableOpacity,{
+style:{flex:1,flexDirection:'column'},
+onPress:function onPress(){return _this2.tabToast('Bookmarks');}},
+_react2.default.createElement(_reactNative.View,{style:{flex:1,flexDirection:'column'}},
+_react2.default.createElement(_reactNative.Image,{
+style:styles.imageTab,
+source:require('./img/bookmark.png')}),
+
+_react2.default.createElement(_reactNative.Text,{style:styles.textTab},"Favourites"))),
+
+
+_react2.default.createElement(_reactNative.TouchableOpacity,{
+style:{flex:1,flexDirection:'column'},
+onPress:function onPress(){return _this2.tabToast('Trending');}},
+_react2.default.createElement(_reactNative.View,{style:{flex:1,flexDirection:'column'}},
+_react2.default.createElement(_reactNative.Image,{
+style:styles.imageTab,
+source:require('./img/flame.png')}),
+
+_react2.default.createElement(_reactNative.Text,{style:styles.textTab},"Trending"))),
+
+
+_react2.default.createElement(_reactNative.View,{style:{flex:1,flexDirection:'column'},
+onPress:function onPress(){return _this2.tabToast('Profile');}},
+_react2.default.createElement(_reactNative.Image,{
+style:styles.imageTab,
+source:require('./img/profile.png')}),
+
+_react2.default.createElement(_reactNative.Text,{style:styles.textTab},"Profile"))))));
+
+
+
+
+
+}}]);return App;}(_react2.default.Component);exports.default=App;
+
+
+var styles=_reactNative.StyleSheet.create({
+container:{
+flex:1,
+flexDirection:'column'},
+
+containermain:{
+flex:1,
+paddingTop:22,
+flexDirection:'column'},
+
+textTab:{fontSize:16,margin:5,textAlign:'center'},
+imageTab:{width:25,height:25,marginTop:10,alignSelf:'center'},
+containerr:{
+flex:1,
+alignItems:'center',
+paddingTop:10,
+flexDirection:'row'},
+
+transp:{
+flex:1,
+alignItems:'stretch',
+justifyContent:'center'},
+
+textStyle:{
+fontSize:20,
+fontWeight:'bold',
+color:'red',
+fontStyle:'italic',
+backgroundColor:'transparent'},
+
+item:{
+padding:10,
+fontSize:18,
+height:44},
+
+scene:{
+padding:10,
+paddingTop:74,
+flex:1},
+
+imageStyle:{
+width:250,
+height:150,
+margin:10,
+backgroundColor:'rgba(0,0,0,.6)'},
+
+overlay:{
+position:'absolute',
+top:0,
+left:0,
+right:0,
+bottom:0,
+backgroundColor:'rgba(0,0,0,0.5)'},
+
+imaget:{
+flexGrow:1,
+height:null,
+width:null,
+alignItems:'flex-end',
+justifyContent:'flex-end'},
+
+paragraph:{
+textAlign:'left',
+color:'white',
+padding:3,
+backgroundColor:'orange'}});

@@ -1,0 +1,904 @@
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _react2 = require('react');
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index = require('./node_modules/react-transform-hmr/lib/index.js');
+
+var _index2 = _interopRequireDefault(_index);
+
+var _jsxFileName = '/home/naveen/TestProject/App.js';
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+var _reactNative = require('react-native');
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  App: {
+    displayName: 'App'
+  }
+};
+
+var _node_modulesReactTransformHmrLibIndexJs2 = (0, _index2.default)({
+  filename: '/home/naveen/TestProject/App.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _node_modulesReactTransformHmrLibIndexJs2(Component, id);
+  };
+}
+
+var App = _wrapComponent('App')(function (_React$Component) {
+  _inherits(App, _React$Component);
+
+  function App(props) {
+    _classCallCheck(this, App);
+
+    var _this = _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+
+    var ds = new _reactNative.ListView.DataSource({ rowHasChanged: function rowHasChanged(r1, r2) {
+        return r1 !== r2;
+      } });
+    _this.state = {
+      tabimage1: require('./img/video_selected.png'),
+      tabimage2: require('./img/movie_unselected.png'),
+      tabimage3: require('./img/flame_unselected.png'),
+      tabimage4: require('./img/watch_unselected.png'),
+      tabimage5: require('./img/profile_unselected.png'),
+      datasource: ds.cloneWithRows(['http://7wallpapers.net/wp-content/uploads/2_Despicable-Me-3.jpg', 'http://7wallpapers.net/wp-content/uploads/1_The-Croods-2.jpg', 'http://7wallpapers.net/wp-content/uploads/6_Cars-3-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/2_A-Dogs-Purpose-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/3_The-Boss-Baby.jpg', 'http://7wallpapers.net/wp-content/uploads/1_Kingsman-The-Golden-Circle-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/2_Beauty-and-the-Beast-250x150.jpg']),
+      horrorClips: ds.cloneWithRows(['http://7wallpapers.net/wp-content/uploads/1_Rings.jpg', 'http://7wallpapers.net/wp-content/uploads/7_Jeepers-Creepers-3-Cathedral-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/11_The-Dark-Tower-250x150.jpg', 'http://www.free4geeks.com/wp-content/uploads/2014/06/Dracula-Untold.jpg', 'http://7wallpapers.net/wp-content/uploads/3_The-Bye-Bye-Man-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/1_The-Bye-Bye-Man-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/6_The-Mummy-250x150.jpg']),
+      actionClips: ds.cloneWithRows(['http://images.newseveryday.com/data/thumbs/full/54581/720/0/0/0/resident-evil-the-final-chapter.png', 'http://7wallpapers.net/wp-content/uploads/4_Avengers-Age-Of-Ultron.jpg', 'http://7wallpapers.net/wp-content/uploads/2_World-War-Z-2-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/4_World-War-Z-2-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/6_Power-Rangers-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/3_Justice-League-250x150.jpg']),
+      thrillerClips: ds.cloneWithRows(['http://7wallpapers.net/wp-content/uploads/12_Baywatch.jpg', 'http://7wallpapers.net/wp-content/uploads/20_Ghost-in-the-Shell-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/7_Ghost-in-the-Shell-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/11_Beauty-and-the-Beast-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/3_Sleepless.jpg', 'http://7wallpapers.net/wp-content/uploads/1_The-Divergent-Series-Ascendant.jpg', 'http://7wallpapers.net/wp-content/uploads/2_The-Divergent-Series-Ascendant.jpg']),
+      scifiClips: ds.cloneWithRows(['http://7wallpapers.net/wp-content/uploads/4_Valerian-and-the-City-of-a-Thousand-Planets.jpg', 'http://7wallpapers.net/wp-content/uploads/5_Beauty-and-the-Beast-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/1_Life-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/1_A-Cure-for-Wellness-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/17_A-Cure-for-Wellness-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/1_Jeepers-Creepers-3-Cathedral-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/4_Valerian-and-the-City-of-a-Thousand-Planets.jpg']),
+      adventureClips: ds.cloneWithRows(['http://7wallpapers.net/wp-content/uploads/10_Wonder-Woman.jpg', 'http://7wallpapers.net/wp-content/uploads/7_Wonder-Woman.jpg', 'http://7wallpapers.net/wp-content/uploads/19_Kingsman-The-Golden-Circle-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/10_John-Wick-Chapter-Two-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/8_John-Wick-Chapter-Two-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/2_War-for-the-Planet-of-the-Apes.jpg', 'http://7wallpapers.net/wp-content/uploads/2_Transformers-The-Last-Knight-250x150.jpg', 'http://7wallpapers.net/wp-content/uploads/6_Justice-League-250x150.jpg'])
+    };
+    _this.tabToast = _this.tabToast.bind(_this);
+    return _this;
+  }
+
+  _createClass(App, [{
+    key: 'displayToast',
+    value: function displayToast(rowData) {
+      console.log('item: ' + rowData);
+      _reactNative.Alert.alert('Movie URL', rowData, [{ text: 'Ok', onPress: function onPress() {
+          return console.log('OK Pressed');
+        } }], { cancelable: true });
+    }
+  }, {
+    key: 'tabToast',
+    value: function tabToast(data) {
+      console.log('Tab bar pressed: ' + data);
+      if (data === 'Watch Now') {
+        this.setState({
+          tabimage1: require('./img/video_selected.png'),
+          tabimage2: require('./img/movie_unselected.png'),
+          tabimage3: require('./img/flame_unselected.png'),
+          tabimage4: require('./img/watch_unselected.png'),
+          tabimage5: require('./img/profile_unselected.png')
+        });
+      } else if (data === 'Movies') {
+        this.setState({
+          tabimage1: require('./img/video_unselected.png'),
+          tabimage2: require('./img/movie_selected.png'),
+          tabimage3: require('./img/flame_unselected.png'),
+          tabimage4: require('./img/watch_unselected.png'),
+          tabimage5: require('./img/profile_unselected.png')
+        });
+      } else if (data === 'Trending') {
+        this.setState({
+          tabimage1: require('./img/video_unselected.png'),
+          tabimage2: require('./img/movie_unselected.png'),
+          tabimage3: require('./img/flame_selected.png'),
+          tabimage4: require('./img/watch_unselected.png'),
+          tabimage5: require('./img/profile_unselected.png')
+        });
+      } else if (data === 'Watch Later') {
+        this.setState({
+          tabimage1: require('./img/video_unselected.png'),
+          tabimage2: require('./img/movie_unselected.png'),
+          tabimage3: require('./img/flame_unselected.png'),
+          tabimage4: require('./img/watch_selected.png'),
+          tabimage5: require('./img/profile_unselected.png')
+        });
+      } else {
+        this.setState({
+          tabimage1: require('./img/video_unselected.png'),
+          tabimage2: require('./img/movie_unselected.png'),
+          tabimage3: require('./img/flame_unselected.png'),
+          tabimage4: require('./img/watch_unselected.png'),
+          tabimage5: require('./img/profile_selected.png')
+        });
+      }
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      var _this2 = this;
+
+      return _react3.default.createElement(
+        _reactNative.View,
+        { style: styles.containermain, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 99
+          }
+        },
+        _react3.default.createElement(
+          _reactNative.View,
+          { style: { flexDirection: 'row', alignItems: 'center', marginBottom: 5 }, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 100
+            }
+          },
+          _react3.default.createElement(_reactNative.Image, {
+            style: { width: 30, height: 30, marginLeft: 10, marginRight: 10 },
+            source: require('./img/cracklelogo.jpg'),
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 101
+            }
+          }),
+          _react3.default.createElement(
+            _reactNative.View,
+            { style: { flexDirection: 'column', alignItems: 'center' }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 105
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.Text,
+              { style: { fontSize: 15, fontWeight: 'bold', color: 'darkorange', marginLeft: 10 }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 106
+                }
+              },
+              'Crackle'
+            ),
+            _react3.default.createElement(
+              _reactNative.Text,
+              { style: { fontSize: 10, marginLeft: 10 }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 107
+                }
+              },
+              'Trending Movies'
+            )
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.ScrollView,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 110
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.View,
+            { style: styles.container, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 111
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.View,
+              { style: styles.container, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 112
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                { style: { color: 'orange', marginTop: 10, marginBottom: 5, marginLeft: 10,
+                    fontSize: 19 }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 113
+                  }
+                },
+                'Crackle Animated'
+              ),
+              _react3.default.createElement(_reactNative.ListView, {
+                horizontal: true,
+                dataSource: this.state.datasource,
+                renderRow: function renderRow(rowData) {
+                  return _react3.default.createElement(
+                    _reactNative.View,
+                    { style: styles.containerr, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 119
+                      }
+                    },
+                    _react3.default.createElement(
+                      _reactNative.TouchableOpacity,
+                      { style: { width: 250, height: 150, marginLeft: 10, marginRight: 10 },
+                        onPress: function onPress() {
+                          return _this2.displayToast(rowData);
+                        }, __source: {
+                          fileName: _jsxFileName,
+                          lineNumber: 120
+                        }
+                      },
+                      _react3.default.createElement(
+                        _reactNative.Image,
+                        {
+                          source: { uri: rowData },
+                          style: styles.imaget, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 122
+                          }
+                        },
+                        _react3.default.createElement(
+                          _reactNative.View,
+                          { style: { flexDirection: 'column' }, __source: {
+                              fileName: _jsxFileName,
+                              lineNumber: 125
+                            }
+                          },
+                          _react3.default.createElement(
+                            _reactNative.Text,
+                            {
+                              style: styles.paragraph, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 126
+                              }
+                            },
+                            'Animated'
+                          )
+                        )
+                      )
+                    )
+                  );
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 115
+                }
+              })
+            ),
+            _react3.default.createElement(
+              _reactNative.View,
+              { style: styles.container, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 137
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                { style: { color: '#56aea4', marginTop: 10, marginBottom: 5, marginLeft: 10,
+                    fontSize: 19 }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 138
+                  }
+                },
+                'Crackle Horror'
+              ),
+              _react3.default.createElement(_reactNative.ListView, {
+                horizontal: true,
+                dataSource: this.state.horrorClips,
+                renderRow: function renderRow(rowData) {
+                  return _react3.default.createElement(
+                    _reactNative.View,
+                    { style: styles.containerr, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 144
+                      }
+                    },
+                    _react3.default.createElement(
+                      _reactNative.TouchableOpacity,
+                      { style: { width: 250, height: 150, marginLeft: 10, marginRight: 10 },
+                        onPress: function onPress() {
+                          return _this2.displayToast(rowData);
+                        }, __source: {
+                          fileName: _jsxFileName,
+                          lineNumber: 145
+                        }
+                      },
+                      _react3.default.createElement(
+                        _reactNative.Image,
+                        {
+                          source: { uri: rowData },
+                          style: styles.imaget, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 147
+                          }
+                        },
+                        _react3.default.createElement(
+                          _reactNative.Text,
+                          {
+                            style: styles.paragraph, __source: {
+                              fileName: _jsxFileName,
+                              lineNumber: 150
+                            }
+                          },
+                          'Horror'
+                        )
+                      )
+                    )
+                  );
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 140
+                }
+              })
+            ),
+            _react3.default.createElement(
+              _reactNative.View,
+              { style: styles.container, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 160
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                { style: { color: '#f0e364', marginTop: 10, marginBottom: 5, marginLeft: 10,
+                    fontSize: 19 }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 161
+                  }
+                },
+                'Crackle Action'
+              ),
+              _react3.default.createElement(_reactNative.ListView, {
+                horizontal: true,
+                dataSource: this.state.actionClips,
+                renderRow: function renderRow(rowData) {
+                  return _react3.default.createElement(
+                    _reactNative.View,
+                    { style: styles.containerr, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 167
+                      }
+                    },
+                    _react3.default.createElement(
+                      _reactNative.TouchableOpacity,
+                      { style: { width: 250, height: 150, marginLeft: 10, marginRight: 10 },
+                        onPress: function onPress() {
+                          return _this2.displayToast(rowData);
+                        }, __source: {
+                          fileName: _jsxFileName,
+                          lineNumber: 168
+                        }
+                      },
+                      _react3.default.createElement(
+                        _reactNative.Image,
+                        {
+                          style: styles.imaget,
+                          source: { uri: rowData }, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 170
+                          }
+                        },
+                        _react3.default.createElement(
+                          _reactNative.Text,
+                          {
+                            style: styles.paragraph, __source: {
+                              fileName: _jsxFileName,
+                              lineNumber: 173
+                            }
+                          },
+                          'Action'
+                        )
+                      )
+                    )
+                  );
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 163
+                }
+              })
+            ),
+            _react3.default.createElement(
+              _reactNative.View,
+              { style: styles.container, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 183
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                { style: { color: '#7CB583', marginTop: 10, marginBottom: 5, marginLeft: 10,
+                    fontSize: 19 }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 184
+                  }
+                },
+                'Crackle Thriller'
+              ),
+              _react3.default.createElement(_reactNative.ListView, {
+                horizontal: true,
+                dataSource: this.state.thrillerClips,
+                renderRow: function renderRow(rowData) {
+                  return _react3.default.createElement(
+                    _reactNative.View,
+                    { style: styles.containerr, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 190
+                      }
+                    },
+                    _react3.default.createElement(
+                      _reactNative.TouchableOpacity,
+                      { style: { width: 250, height: 150, marginLeft: 10, marginRight: 10 },
+                        onPress: function onPress() {
+                          return _this2.displayToast(rowData);
+                        }, __source: {
+                          fileName: _jsxFileName,
+                          lineNumber: 191
+                        }
+                      },
+                      _react3.default.createElement(
+                        _reactNative.Image,
+                        {
+                          source: { uri: rowData },
+                          style: styles.imaget, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 193
+                          }
+                        },
+                        _react3.default.createElement(
+                          _reactNative.View,
+                          { style: { flexDirection: 'column' }, __source: {
+                              fileName: _jsxFileName,
+                              lineNumber: 196
+                            }
+                          },
+                          _react3.default.createElement(
+                            _reactNative.Text,
+                            {
+                              style: styles.paragraph, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 197
+                              }
+                            },
+                            'Thriller'
+                          )
+                        )
+                      )
+                    )
+                  );
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 186
+                }
+              })
+            ),
+            _react3.default.createElement(
+              _reactNative.View,
+              { style: styles.container, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 208
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                { style: { color: '#707E9D', marginTop: 10, marginBottom: 5, marginLeft: 10,
+                    fontSize: 19 }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 209
+                  }
+                },
+                'Crackle Sci-Fi'
+              ),
+              _react3.default.createElement(_reactNative.ListView, {
+                horizontal: true,
+                dataSource: this.state.scifiClips,
+                renderRow: function renderRow(rowData) {
+                  return _react3.default.createElement(
+                    _reactNative.View,
+                    { style: styles.containerr, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 215
+                      }
+                    },
+                    _react3.default.createElement(
+                      _reactNative.TouchableOpacity,
+                      { style: { width: 250, height: 150, marginLeft: 10, marginRight: 10 },
+                        onPress: function onPress() {
+                          return _this2.displayToast(rowData);
+                        }, __source: {
+                          fileName: _jsxFileName,
+                          lineNumber: 216
+                        }
+                      },
+                      _react3.default.createElement(
+                        _reactNative.Image,
+                        {
+                          source: { uri: rowData },
+                          style: styles.imaget, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 218
+                          }
+                        },
+                        _react3.default.createElement(
+                          _reactNative.View,
+                          { style: { flexDirection: 'column' }, __source: {
+                              fileName: _jsxFileName,
+                              lineNumber: 221
+                            }
+                          },
+                          _react3.default.createElement(
+                            _reactNative.Text,
+                            {
+                              style: styles.paragraph, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 222
+                              }
+                            },
+                            'Sci-Fi'
+                          )
+                        )
+                      )
+                    )
+                  );
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 211
+                }
+              })
+            ),
+            _react3.default.createElement(
+              _reactNative.View,
+              { style: styles.container, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 233
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.Text,
+                { style: { color: 'orange', marginTop: 10, marginBottom: 5, marginLeft: 10,
+                    fontSize: 19 }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 234
+                  }
+                },
+                'Crackle Adventure'
+              ),
+              _react3.default.createElement(_reactNative.ListView, {
+                horizontal: true,
+                dataSource: this.state.adventureClips,
+                renderRow: function renderRow(rowData) {
+                  return _react3.default.createElement(
+                    _reactNative.View,
+                    { style: styles.containerr, __source: {
+                        fileName: _jsxFileName,
+                        lineNumber: 240
+                      }
+                    },
+                    _react3.default.createElement(
+                      _reactNative.TouchableOpacity,
+                      { style: { width: 250, height: 150, marginLeft: 10, marginRight: 10 },
+                        onPress: function onPress() {
+                          return _this2.displayToast(rowData);
+                        }, __source: {
+                          fileName: _jsxFileName,
+                          lineNumber: 241
+                        }
+                      },
+                      _react3.default.createElement(
+                        _reactNative.Image,
+                        {
+                          source: { uri: rowData },
+                          style: styles.imaget, __source: {
+                            fileName: _jsxFileName,
+                            lineNumber: 243
+                          }
+                        },
+                        _react3.default.createElement(
+                          _reactNative.View,
+                          { style: { flexDirection: 'column' }, __source: {
+                              fileName: _jsxFileName,
+                              lineNumber: 246
+                            }
+                          },
+                          _react3.default.createElement(
+                            _reactNative.Text,
+                            {
+                              style: styles.paragraph, __source: {
+                                fileName: _jsxFileName,
+                                lineNumber: 247
+                              }
+                            },
+                            'Adventure'
+                          )
+                        )
+                      )
+                    )
+                  );
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 236
+                }
+              })
+            )
+          )
+        ),
+        _react3.default.createElement(
+          _reactNative.View,
+          {
+            __source: {
+              fileName: _jsxFileName,
+              lineNumber: 260
+            }
+          },
+          _react3.default.createElement(
+            _reactNative.View,
+            { style: { flexDirection: 'row', alignItems: 'center', backgroundColor: 'lightgrey' }, __source: {
+                fileName: _jsxFileName,
+                lineNumber: 261
+              }
+            },
+            _react3.default.createElement(
+              _reactNative.TouchableOpacity,
+              {
+                style: { flex: 1, flexDirection: 'column' },
+                onPress: function onPress() {
+                  return _this2.tabToast('Watch Now');
+                }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 262
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.View,
+                { style: { flex: 1, flexDirection: 'column' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 265
+                  }
+                },
+                _react3.default.createElement(_reactNative.Image, {
+                  style: styles.imageTab,
+                  source: this.state.tabimage1,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 266
+                  }
+                }),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  { style: styles.textTab, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 270
+                    }
+                  },
+                  'Watch Now'
+                )
+              )
+            ),
+            _react3.default.createElement(
+              _reactNative.TouchableOpacity,
+              {
+                style: { flex: 1, flexDirection: 'column' },
+                onPress: function onPress() {
+                  return _this2.tabToast('Movies');
+                }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 273
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.View,
+                { style: { flex: 1, flexDirection: 'column' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 276
+                  }
+                },
+                _react3.default.createElement(_reactNative.Image, {
+                  style: styles.imageTab,
+                  source: this.state.tabimage2,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 277
+                  }
+                }),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  { style: styles.textTab, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 281
+                    }
+                  },
+                  'Movies'
+                )
+              )
+            ),
+            _react3.default.createElement(
+              _reactNative.TouchableOpacity,
+              {
+                style: { flex: 1, flexDirection: 'column' },
+                onPress: function onPress() {
+                  return _this2.tabToast('Trending');
+                }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 284
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.View,
+                { style: { flex: 1, flexDirection: 'column' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 287
+                  }
+                },
+                _react3.default.createElement(_reactNative.Image, {
+                  style: styles.imageTab,
+                  source: this.state.tabimage3,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 288
+                  }
+                }),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  { style: styles.textTab, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 292
+                    }
+                  },
+                  'Trending'
+                )
+              )
+            ),
+            _react3.default.createElement(
+              _reactNative.TouchableOpacity,
+              {
+                style: { flex: 1, flexDirection: 'column' },
+                onPress: function onPress() {
+                  return _this2.tabToast('Watch Later');
+                }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 295
+                }
+              },
+              _react3.default.createElement(
+                _reactNative.View,
+                { style: { flex: 1, flexDirection: 'column' }, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 298
+                  }
+                },
+                _react3.default.createElement(_reactNative.Image, {
+                  style: styles.imageTab,
+                  source: this.state.tabimage4,
+                  __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 299
+                  }
+                }),
+                _react3.default.createElement(
+                  _reactNative.Text,
+                  { style: styles.textTab, __source: {
+                      fileName: _jsxFileName,
+                      lineNumber: 303
+                    }
+                  },
+                  'Watch Later'
+                )
+              )
+            ),
+            _react3.default.createElement(
+              _reactNative.View,
+              { style: { flex: 1, flexDirection: 'column' }, __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 306
+                }
+              },
+              _react3.default.createElement(_reactNative.Image, {
+                style: styles.imageTab,
+                source: this.state.tabimage5,
+                onPress: function onPress() {
+                  return _this2.tabToast('Profile');
+                },
+                __source: {
+                  fileName: _jsxFileName,
+                  lineNumber: 307
+                }
+              }),
+              _react3.default.createElement(
+                _reactNative.Text,
+                { style: styles.textTab, __source: {
+                    fileName: _jsxFileName,
+                    lineNumber: 312
+                  }
+                },
+                'Profile'
+              )
+            )
+          )
+        )
+      );
+    }
+  }]);
+
+  return App;
+}(_react3.default.Component));
+
+exports.default = App;
+
+
+var styles = _reactNative.StyleSheet.create({
+  container: {
+    flex: 1,
+    flexDirection: 'column',
+    backgroundColor: '#eee'
+  },
+  containermain: {
+    flex: 1,
+    paddingTop: 22,
+    flexDirection: 'column'
+  },
+  textTab: { fontSize: 14, marginTop: 5, marginBottom: 2, textAlign: 'center' },
+  imageTab: { width: 25, height: 25, marginTop: 10, alignSelf: 'center' },
+  containerr: {
+    flex: 1,
+    alignItems: 'center',
+    paddingTop: 10,
+    flexDirection: 'row'
+  },
+  transp: {
+    flex: 1,
+    alignItems: 'stretch',
+    justifyContent: 'center'
+  },
+  textStyle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+    color: 'red',
+    fontStyle: 'italic',
+    backgroundColor: 'transparent'
+  },
+  item: {
+    padding: 10,
+    fontSize: 18,
+    height: 44
+  },
+  scene: {
+    padding: 10,
+    paddingTop: 74,
+    flex: 1
+  },
+  imageStyle: {
+    width: 250,
+    height: 150,
+    margin: 10,
+    backgroundColor: 'rgba(0,0,0,.6)'
+  },
+  overlay: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    backgroundColor: 'rgba(0,0,0,0.5)'
+  },
+  imaget: {
+    flexGrow: 1,
+    height: null,
+    width: null,
+    alignItems: 'flex-end',
+    justifyContent: 'flex-end'
+  },
+  paragraph: {
+    textAlign: 'left',
+    color: 'white',
+    padding: 3,
+    backgroundColor: 'orange'
+  }
+});

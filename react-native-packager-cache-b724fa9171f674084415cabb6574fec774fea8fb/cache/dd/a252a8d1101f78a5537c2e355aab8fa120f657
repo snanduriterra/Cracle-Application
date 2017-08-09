@@ -1,0 +1,58 @@
+'use strict';
+
+var _jsxFileName = '/home/naveen/TestProject/welcome.ios.js';
+var React = require('react-native');
+var StyleSheet = React.StyleSheet,
+    View = React.View,
+    Text = React.Text,
+    Component = React.Component;
+
+
+var styles = StyleSheet.create({
+  description: {
+    fontSize: 20,
+    textAlign: 'center',
+    color: '#FFFFFF'
+  },
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#123456'
+  }
+});
+
+var Welcome = function (_Component) {
+  babelHelpers.inherits(Welcome, _Component);
+
+  function Welcome() {
+    babelHelpers.classCallCheck(this, Welcome);
+    return babelHelpers.possibleConstructorReturn(this, (Welcome.__proto__ || Object.getPrototypeOf(Welcome)).apply(this, arguments));
+  }
+
+  babelHelpers.createClass(Welcome, [{
+    key: 'render',
+    value: function render() {
+      return React.createElement(
+        View,
+        { style: styles.container, __source: {
+            fileName: _jsxFileName,
+            lineNumber: 28
+          }
+        },
+        React.createElement(
+          Text,
+          { style: styles.description, __source: {
+              fileName: _jsxFileName,
+              lineNumber: 29
+            }
+          },
+          'Welcome to your React Native Start Component!'
+        )
+      );
+    }
+  }]);
+  return Welcome;
+}(Component);
+
+module.exports = Welcome;

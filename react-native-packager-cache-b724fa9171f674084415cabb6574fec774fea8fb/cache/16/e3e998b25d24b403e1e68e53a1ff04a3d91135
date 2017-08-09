@@ -1,0 +1,14 @@
+var _reactNative = require('react-native');
+
+var _App = require('./App');
+
+var _App2 = _interopRequireDefault(_App);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+console.ignoredYellowBox = ['Remote debugger'];
+console.disableYellowBox = true;
+
+_reactNative.AppRegistry.registerComponent('materials', function () {
+  return _App2.default;
+});
